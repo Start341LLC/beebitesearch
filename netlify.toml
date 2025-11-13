@@ -1,12 +1,9 @@
-
 [build]
-  command = "npm run build"
-  publish = "dist/public"
+  base = "."  # Use the main folder (root) where index.html lives!
+  command = ""  # No build needed – skip npm junk
+  publish = "."  # Serve files from the main folder
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200
-
-[build.environment]
-  NODE_VERSION = "20"
+  status = 200  # This keeps your pretty URLs like /realestate working without .html
